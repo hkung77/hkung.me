@@ -14,3 +14,10 @@
     font-size: 5em;
     text-shadow: 0 0.04em gray;
 }
+
+/* Styling for drop down */
+.dropdown-list {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+}
