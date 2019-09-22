@@ -1,0 +1,16 @@
+/* Used to override the default bootstrap css */
+.no-padding  {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Adds black to the list of bg colours provided by bootstrap */
+.bg-black {
+    background-color: black;
+}
+
+/* Adds styling to the slogan */
+.slogan {
+    font-size: 5em;
+    text-shadow: 0 0.04em gray;
+}

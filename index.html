@@ -1,164 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Henry Kung</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Normalize CSS -->
+    <!-- Used to keep css rendered consistently between browser -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- Polyfill JS -->
+    <!-- Used to support older browsers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.min.js" 
+        integrity="sha256-/XfEHUGimdIk42Vy7oTnNLtT8sVrO6vnhhnsQT1W1oo=" crossorigin="anonymous"></script>
 
-    <!-- Theme CSS -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 
+    <!-- Font Awesome CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <!-- Local CSS & Javascript -->
+    <link rel="stylesheet" href="./css/override.css" />
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body>
+    <!-- NavBar -->
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <a class="navbar-brand" href="#home">Henry Kung</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#about">About<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Henry Kung</span>
+            <!-- External links -->
+            <span class="px-2">
+                <a href="https://www.github.com/hkung77" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-github fa-2x fa-inverse" aria-hidden="true"></i>
                 </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">profile</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Experience</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+            </span>
+            <span class="px-2">
+                <a href="https://www.linkedin.com/in/hkung77" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-linkedin-square fa-2x fa-inverse" aria-hidden="true"></i>
+                </a>
+            </span>
         </div>
-        <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <ollect the nav links, forms, and other content for toggling -->
-
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Digital Experience & Reality <span class=""> Collide </span></h1>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+    <div data-spy="scroll" data-target="#main-nav" data-offset="0" class="bg-black">
+        <!-- Home -->
+        <header id="home" class="container-fluid no-padding">
+            <div class="col-md-12 no-padding">
+                <img src="./assets/background.jpg" alt="image of space" class="img-responsive w-100">
+                <div class="card-img-overlay text-white m-5">
+                    <h1 id="about">Senior Software Developer</h1>
+                    <div class="row m-auto">
+                        <div class="col-md-12">
+                        <p class="animated fadeInUp text-center font-weight-lighter slogan pt-5 mt-5"> Dreaming Beyond Expectations </p>
+                        </div>
                     </div>
                 </div>
+                </img>
             </div>
-        </div>
-    </header>
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>ABOUT ME</h2>
-                <p>
-                    A compelling passion towards creating digital user experiences with modern innovative technology. 
-                </p>
-                <p> 
-                I am not satisfied until I achieve clean, efficient, and high quality code. I work relentlessly to improve my skills and deepen my knowledge. I consider problems as a fun challenge and enjoys finding creative yet appropriate solutions. Always contributes vigorously to the efforts of the team, whether as a leader or a team member.
-                </p>
+        </header>
+        <section>
+            <div class="">
+                <h2>Technological Specialty</h2>
             </div>
-        </div>
-    </section>
+        </section>
+        <h2 id="experience">Work Experience</h2>
 
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Curious to know more?</h2>
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://github.com/hkung77" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/hkung77" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        <h2 id="projects">Side Projects or Hobbies</h2>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Me!</h2>
-                <p>
-                Ready to get connected? That's great! Give me a call or send me an email and I get back to you as soon as possible!
-                </p>
-                <i class="fa fa-phone fa-3x sr-contact" data-sr-id="9" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
-                <p> 647-267-5926 </p>
-                <i class="fa fa-envelope-o fa-3x sr-contact" data-sr-id="10" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
-                <p><a href="mailto:henrykung@live.ca">henrykung@live.ca</a>
-                </p>
-                
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; henrykung 2016</p>
-        </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
-    <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
+        <h2 id="contact">Contact</h2>
+    </div>
 
 </body>
 
