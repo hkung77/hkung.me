@@ -1,3 +1,7 @@
+body {
+    background-color: black;
+}
+
 /* Used to override the default bootstrap css */
 .no-padding  {
     padding-left: 0;
@@ -15,9 +19,62 @@
     text-shadow: 0 0.04em gray;
 }
 
+.about-description {
+    font-size: 1.5em;
+}
+
 /* Styling for drop down */
 .dropdown-list {
     background-color: transparent;
     border: none;
     font-size: 2em;
+}
+
+/* Styling for each drop down item */
+.dropdown-list-item {
+    font-size: 1.5em;
+}
+
+/* Animation for drowndown closing */
+.animate-dropup {
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+/* Animation for drowndown opening */
+.animate-dropdown {
+    max-height: 500px;
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+}
+
+
+/* University styling*/
+.university {
+    line-height: 3em;
+    text-decoration: underline;
+    font-size: 1.8em;
+}
+
+.university-details {
+    font-size: 1.5em;
+    line-height: 0.5em;
+}
+
+/* Styling for drop down */
+.work-list {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+}
+
+.work-date {
+    font-size: 0.7em;
+}
+ 
+.company-title {
+    line-height: 3em;
+    text-decoration: underline;
+    font-size: 1.8em;
 }

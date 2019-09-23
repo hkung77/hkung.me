@@ -56,8 +56,8 @@
         </button>
         <div class="collapse navbar-collapse" id="main-nav">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" data-micron="fade" href="#about">About<span class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link" data-micron="fade" href="#about">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" data-micron="fade" href="#experience">Experience</a>
@@ -73,15 +73,21 @@
             <!-- External links -->
             <span class="px-2">
                 <a data-micron="fade" href="https://www.github.com/hkung77" target="_blank" rel="noopener noreferrer">
-                    <i class="fa fa-github fa-2x fa-inverse" aria-hidden="true"></i>
+                    <i id="github-icon" class="fa fa-github fa-2x fa-inverse" aria-hidden="true"></i>
                 </a>
             </span>
             <span class="px-2">
                 <a data-micron="fade" href="https://www.linkedin.com/in/hkung77" target="_blank"
                     rel="noopener noreferrer">
-                    <i class="fa fa-linkedin-square fa-2x fa-inverse" aria-hidden="true"></i>
+                    <i id="linkedin-icon" class="fa fa-linkedin-square fa-2x fa-inverse" aria-hidden="true"></i>
                 </a>
             </span>
+            <span class="px-2">
+                <a data-micron="fade" href="mailto://henrykung@live.ca" rel="noopener noreferrer">
+                    <i id="email-icon" class="fa fa-envelope fa-2x fa-inverse" aria-hidden="true"></i>
+                </a>
+            </span>
+
         </div>
     </nav>
 
@@ -91,7 +97,7 @@
             <div class="col-md-12 no-padding">
                 <img src="./assets/background.jpg" alt="image of space" class="img-responsive w-100">
                 <div class="card-img-overlay text-white m-5">
-                    <h1 id="about">Senior Software Developer</h1>
+                    <h1>Senior Software Developer</h1>
                     <div class="row m-auto">
                         <div class="col-md-12">
                             <p class="animated fadeInUp text-center font-weight-lighter slogan pt-5 mt-5"> Dreaming
@@ -102,43 +108,251 @@
                 </img>
             </div>
         </header>
-        <section>
+
+        <!-- About Me -->
+        <section id="about" class="pb-5 mb-5">
+            <div class="col-md-12 mb-5 pb-5">
+                <div class="d-flex">
+                    <h2 class="text-white ml-5">About Me</h2>
+                    <span class="px-3 mt-1">
+                        <i class="fa fa-user fa-2x fa-inverse" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-7 mx-auto text-white">
+                <p class="about-description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius auctor lectus, a rhoncus justo
+                    dapibus id. Fusce ultrices pellentesque dui at malesuada. Nunc cursus pretium dictum. Vestibulum in
+                    ligula eu magna sodales iaculis a vel elit. Suspendisse id elit eget metus scelerisque egestas.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla
+                    sit amet placerat libero. Curabitur ac ultrices odio. Proin ut nibh ac tellus hendrerit varius.
+                    Vestibulum sit amet est vulputate, vulputate augue et, iaculis odio. Pellentesque habitant morbi
+                    tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget luctus lacus. Quisque
+                    lectus nulla, blandit sed auctor ut, euismod ac elit. Proin mollis nunc quis dui lobortis
+                    scelerisque.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tech Specialty -->
+        <section id="experience" class="mt-5 pt-5">
             <div class="col-md-12">
-                <h2 class="text-white ml-5">Technological Specialties</h2>
+                <div class="d-flex">
+                    <h2 class="text-white ml-5 mb-5">Technical Experience</h2>
+                    <span class="px-3 mt-1">
+                        <i class="fa fa-laptop fa-2x fa-inverse" aria-hidden="true"></i>
+                    </span>
+                </div>
             </div>
+            <!--Mobile -->
             <div class="col-md-12 mb-5">
                 <div class="mx-5 border-bottom">
                     <button class="btn dropdown-list text-white font-weight-lighter" aria-haspopup="true"
-                        aria-expanded="false" data-micron="squeeze">
-                        Front End
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('mobileList')">
+                        Mobile
                         <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
                     </button>
                 </div>
+                <div id="mobileList" class="mx-5 border-bottom animate-dropup d-flex justify-content-around">
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">React Native, Java/ Kotlin, Swift</li>
+                            <li>Android Studio, XCode</li>
+                            <li>Gradle, Proguard, App store & Play store submission</li>
+                            <li>Firebase Push Notifications, Touch & FaceID</li>
+                            <li>Sketch, REST, GraphQL, OAuth, Google Analytics</li>
+                            <li class="mb-5">JEST, Enzyme, E2E Testing, CI/CD (Jenkins, Codeship, CodePush, Microsoft
+                                App Center)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">React Native Specific
+                                <ul>
+                                    <li>Context, Hooks/Lifecycles</li>
+                                    <li>React-Redux, Relay/Apollo, Intl</li>
+                                    <li>React Navigation / React Native Navigation</li>
+                                    <li>Integration with native features (Calendar, Contacts, Photo Library, Camera)
+                                    </li>
+                            </li>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+            <!-- FrontEnd -->
             <div class="col-md-12 mb-5">
                 <div class="mx-5 border-bottom">
                     <button class="btn dropdown-list text-white font-weight-lighter" aria-haspopup="true"
-                        aria-expanded="false" data-micron="squeeze">
-                        Back End
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('frontEndList')">
+                        Frontend
                         <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
                     </button>
                 </div>
+                <div id="frontEndList" class="mx-5 border-bottom animate-dropup d-flex justify-content-around">
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">HTML, CSS, Javascript (ES6) </li>
+                            <li>Bootstrap, JQuery, SCSS/LESS</li>
+                            <li>React, Metoer JS, AEM (Adobe Experience Manager)</li>
+                            <li>Other libraries such as (momentJS, animateCSS, FontAwesome)</li>
+                            <li>Sketch, REST, GraphQL, OAuth, Google Analytics</li>
+                            <li class="mb-5">JEST, Enzyme, E2E Testing, CI/CD (Jenkins, Codeship)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">React Specific
+                                <ul>
+                                    <li>Context, Hooks/Lifecycles</li>
+                                    <li>React-Redux Relay/Apollo, Intl</li>
+                                    <li>React Router</li>
+                            </li>
+                        </ul>
+                        </ul>
+                    </div>
+                </div>
             </div>
+
+            <!-- Backend -->
             <div class="col-md-12 mb-5">
                 <div class="mx-5 border-bottom">
                     <button class="btn dropdown-list text-white font-weight-lighter" aria-haspopup="true"
-                        aria-expanded="false" data-micron="squeeze">
-                        Mobile 
+                        aria-expanded="false" data-micron="squeeze" onclick=" handleDropDownClick('backEndList')">
+                        Backend
                         <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
                     </button>
+                </div>
+                <div id="backEndList" class="mx-5 border-bottom animate-dropup d-flex justify-content-around">
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">Python, Java</li>
+                            <li>Django, Flask, Pipenv</li>
+                            <li>Java Server Packets</li>
+                            <li class="pb-5">MongoDB, Postgres</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">REST API, Graphql</li>
+                            <li>AWS (S3, SNS, EC2)</li>
+                            <li>Google Cloud (QuerySearch), Digital Ocean</li>
+                            <li class="pb-5">WSGI, Nginx, AWS (S2, SNS, EC2)</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
-        <h2 id="experience">Work Experience</h2>
 
-        <h2 id="projects">Side Projects or Hobbies</h2>
+        <!-- Work Experience -->
+        <section class="mt-5 pt-5">
+            <div class="col-md-12">
+                <div class="d-flex">
+                    <h2 class="text-white ml-5 mb-5">Work Experience</h2>
+                    <span class="px-3 mt-1">
+                        <i class="fa fa-briefcase fa-2x fa-inverse" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <!-- Crowd Cast -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('crowdcast-senior')">
+                        <div data-micron="squeeze" class="d-flex justify-content-between">
+                            <span data-micron="squeeze">Senior Software Engineer</span>
+                            <span class="work-date mt-3" data-micron="squeeze">Jan 2018 - Present
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
+                        </div>
+                    </button>
+                </div>
+                <div id="crowdcast-senior" class="mx-5 border-bottom animate-dropup">
+                    <a href="https://crowdcast.jp/ja/" target="_blank" rel="noreferrer noopener" class="text-white ml-5 company-title font-weight-light">Crowd Cast</a>
+                </div>
+            </div>
 
-        <h2 id="contact">Contact</h2>
+            <!-- Crowd Cast -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('crowdcast')">
+                        <div data-micron="squeeze" class="d-flex justify-content-between">
+                            <span data-micron="squeeze">Software Engineer</span>
+                            <span data-micron="squeeze" class="work-date mt-3">Jan 2017 - Jan 2018
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
+                        </div>
+                    </button>
+                </div>
+                <div id="crowdcast" class="mx-5 border-bottom animate-dropup">
+                    <a href="https://crowdcast.jp/ja/" target="_blank" rel="noopener noreferrer" class="text-white ml-5 company-title font-weight-light">Crowd Cast</a>
+                </div>
+            </div>
+
+            <!-- Gale Partners -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('gale-partners')">
+                        <div data-micron="squeeze" class="d-flex justify-content-between">
+                            <span data-micron="squeeze">Full Stack Developer</span>
+                            <span data-micron="squeeze" class="work-date mt-3">Apr 2015 - Dec 2016
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
+                        </div>
+                    </button>
+                </div>
+                <div id="gale-partners" class="mx-5 border-bottom animate-dropup">
+                    <a href="https://gale.agency" class="text-white ml-5 company-title font-weight-light" target="_blank" rel="noopener noreferrer">Gale Partners</a>
+                </div>
+            </div>
+
+            <!-- Canada -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('environment-canada')">
+                        <div data-micron="squeeze" class="d-flex justify-content-between">
+                            <span data-micron="squeeze">CO-OP Systems Analyst</span>
+                            <span data-micron="squeeze" class="work-date mt-3">Jan 2013 - Aug 2013
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
+                        </div>
+                    </button>
+                </div> 
+                <div id="environment-canada" class="mx-5 border-bottom animate-dropup">
+                    <a class="text-white ml-5 company-title font-weight-light"
+                        href="https://www.canada.ca/en/environment-climate-change/services/air-pollution/research-science/applications/modelling.html"
+                        target="_blank" rel="noopener noreferrer">Environment Canada (ARQI)</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- -Education -->
+        <section class="mt-5 pt-5">
+            <div class="col-md-12">
+                <div class="d-flex">
+                    <h2 class="text-white ml-5">Education</h2>
+                    <span class="px-3 mt-1">
+                        <i class="fa  fa-graduation-cap fa-2x fa-inverse" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="ml-5">
+                    <a class="text-white university font-weight-light" rel="noopener noreferrer"
+                        href="https://www.ryerson.ca" target="_blank">Ryerson University</a>
+                    <p class="text-white university-details font-weight-lighter">Bachelors Science, Computer Science
+                        2015</p>
+                    <p class="text-white university-details font-weight-lighter">Toronto, ON, Canada</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mt-5 pt-5">
+            <div class="col-md-12">
+                <h2 class="text-white ml-5">Side Projects or Hobbies</h2>
+            </div>
+        </section>
+
     </div>
 
 </body>
