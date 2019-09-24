@@ -15,13 +15,62 @@ body {
 
 /* Adds styling to the slogan */
 .slogan {
-    font-size: 5em;
+    font-size: 5vw;
     text-shadow: 0 0.04em gray;
+    margin-top: 9vw;
 }
 
-.about-description {
-    font-size: 1.5em;
+/* styling for contacts button */
+.contact {
+   background-color: transparent;
+   border: none;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .about-description {
+        font-size: 3vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    /* Adds styling to the slogan */
+    .slogan {
+        font-size: 5vw;
+        text-shadow: 0 0.04em gray;
+        margin-top: 2vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .about-description {
+        font-size: 3vw;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .about-description {
+        font-size: 2vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .about-description {
+        font-size: 1.3vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+   .about-description {
+        font-size: 1.3vw;
+    }
+}
+
 
 /* Styling for drop down */
 .dropdown-list {
@@ -44,7 +93,7 @@ body {
 
 /* Animation for drowndown opening */
 .animate-dropdown {
-    max-height: 500px;
+    max-height: 700px;
     transition: max-height 0.5s ease-in;
     overflow: hidden;
 }
@@ -77,4 +126,13 @@ body {
     line-height: 3em;
     text-decoration: underline;
     font-size: 1.8em;
+}
+
+.company-location {
+    font-size: 1.2em;
+    margin-top: -1em;
+}
+
+.company-responsibilities {
+    font-size: 1.2em;
 }

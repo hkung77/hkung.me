@@ -35,11 +35,36 @@ const handleDropDownClick = (id) => {
 }
 
 // Handler for when contact is clicked on the nav bar
-// TODO:
+// Debounce if user clicks too fast
+let debounce = false;
 const handleContactClick = () => {
-    const githubIcon = document.getElementById('github-icon');
-    const linkedinIcon = document.getElementById('linkedin-icon');
-    const emailIcon = document.getElementById('email-icon');
+    const contact = [
+        document.getElementById('github-icon'),
+        document.getElementById('linkedin-icon'),
+        document.getElementById('email-icon')
+    ];
 
+    // Debounce user if animation is still in progress
+    if (!debounce) {
+        debounce = true;
+        // Apply animation styling
+        contact.forEach((node, index) => {
+            if (index > 0) {
+                node.className += ` animated heartBeat fast delay-${index}s`; 
+            } else {
+                node.className += ` animated heartBeat fast`; 
+            }
+        });
+
+        setTimeout(() => {
+            // Remove animation styling
+            contact.forEach((node) => {
+                node.classList.remove("animated");
+                node.classList.remove("heartBeat");
+            });
+            // End debounce 
+            debounce = false;
+        }, 3000)
+    }
 
 }

@@ -66,7 +66,7 @@
                     <a class="nav-link" data-micron="fade" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" data-micron="fade" href="#contact">Contact</a>
+                    <button class="nav-link contact" onclick="handleContactClick()" data-micron="fade">Contact</button>
                 </li>
             </ul>
 
@@ -97,11 +97,10 @@
             <div class="col-md-12 no-padding">
                 <img src="./assets/background.jpg" alt="image of space" class="img-responsive w-100">
                 <div class="card-img-overlay text-white m-5">
-                    <h1>Senior Software Developer</h1>
                     <div class="row m-auto">
                         <div class="col-md-12">
-                            <p class="animated fadeInUp text-center font-weight-lighter slogan pt-5 mt-5"> Dreaming
-                                Beyond Expectations </p>
+                            <h1 class="animated fadeInUp text-center font-weight-lighter slogan"> Dreaming
+                                Beyond Expectations </h1>
                         </div>
                     </div>
                 </div>
@@ -119,17 +118,20 @@
                     </span>
                 </div>
             </div>
-            <div class="col-md-7 mx-auto text-white">
+            <div class="col-md-9 mx-auto text-white">
                 <p class="about-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam varius auctor lectus, a rhoncus justo
-                    dapibus id. Fusce ultrices pellentesque dui at malesuada. Nunc cursus pretium dictum. Vestibulum in
-                    ligula eu magna sodales iaculis a vel elit. Suspendisse id elit eget metus scelerisque egestas.
-                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nulla
-                    sit amet placerat libero. Curabitur ac ultrices odio. Proin ut nibh ac tellus hendrerit varius.
-                    Vestibulum sit amet est vulputate, vulputate augue et, iaculis odio. Pellentesque habitant morbi
-                    tristique senectus et netus et malesuada fames ac turpis egestas. Integer eget luctus lacus. Quisque
-                    lectus nulla, blandit sed auctor ut, euismod ac elit. Proin mollis nunc quis dui lobortis
-                    scelerisque.
+                    Henry Kung, Senior Software Engineer 
+                    </br></br>
+                    From working in several start ups and having a small team of developers, </br>
+                    I have delivered several quality applications to production, capable of scaling to enterprize solutions. </br>
+                    Took ownership of deploying, developing, and maintaining our web and mobile applications, </br>
+                    I've setup CI and CD, bug tracking, analytics on both platforms, along with implementing the UI. </br>
+                    </br>
+                    I have had the opportunity to work internationally from Canada to Japan. </br>
+                    Even though I was abroad, I was still active in the tech community, </br>
+                    by attending tech-meetups or joining tech forums though Github/ Discord/ Stack Overflow. </br>
+                    I keep myself in the loop with new/ emerging technology through subscribing to </br>
+                    newsletters, github repositories, and even participating in Stack Overflow's yearly developer survey. 
                 </p>
             </div>
         </section>
@@ -147,7 +149,7 @@
             <!--Mobile -->
             <div class="col-md-12 mb-5">
                 <div class="mx-5 border-bottom">
-                    <button class="btn dropdown-list text-white font-weight-lighter" aria-haspopup="true"
+                    <button class="btn dropdown-list text-white col-md-12 font-weight-lighter justify-content-between d-flex" aria-haspopup="true"
                         aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('mobileList')">
                         Mobile
                         <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
@@ -174,8 +176,8 @@
                                     <li>React Navigation / React Native Navigation</li>
                                     <li>Integration with native features (Calendar, Contacts, Photo Library, Camera)
                                     </li>
+                                </ul>
                             </li>
-                        </ul>
                         </ul>
                     </div>
                 </div>
@@ -184,7 +186,7 @@
             <!-- FrontEnd -->
             <div class="col-md-12 mb-5">
                 <div class="mx-5 border-bottom">
-                    <button class="btn dropdown-list text-white font-weight-lighter" aria-haspopup="true"
+                    <button class="btn dropdown-list text-white font-weight-lighter col-md-12 d-flex justify-content-between" aria-haspopup="true"
                         aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('frontEndList')">
                         Frontend
                         <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
@@ -218,7 +220,7 @@
             <!-- Backend -->
             <div class="col-md-12 mb-5">
                 <div class="mx-5 border-bottom">
-                    <button class="btn dropdown-list text-white font-weight-lighter" aria-haspopup="true"
+                    <button class="btn dropdown-list text-white font-weight-lighter col-md-12 d-flex justify-content-between" aria-haspopup="true"
                         aria-expanded="false" data-micron="squeeze" onclick=" handleDropDownClick('backEndList')">
                         Backend
                         <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
@@ -269,6 +271,16 @@
                 </div>
                 <div id="crowdcast-senior" class="mx-5 border-bottom animate-dropup">
                     <a href="https://crowdcast.jp/ja/" target="_blank" rel="noreferrer noopener" class="text-white ml-5 company-title font-weight-light">Crowd Cast</a>
+                    <p class="text-white ml-5 font-weight-light company-location">Tokyo, Japan</p>
+                    <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+                        <ul>
+                            <li class="my-1">Documented engineering onboarding as well as interviewing/training new engineers</li>
+                            <li class="my-1">Documented feature specifications and UI/UX, working closely with engineering manager/ product manager</li>
+                            <li class="my-1">Integrations with bots to keep productivity high (ex. Pull Panda & Dependabot)</li>
+                            <li class="my-1">Managing mobile and front end team, with monthly meetings/ OKRs(quarterly goals)</li>
+                            <li class="my-1">Responsible for developing/ releasing/ & maintaining core features on web and mobile platform using React & React Native</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -286,6 +298,17 @@
                 </div>
                 <div id="crowdcast" class="mx-5 border-bottom animate-dropup">
                     <a href="https://crowdcast.jp/ja/" target="_blank" rel="noopener noreferrer" class="text-white ml-5 company-title font-weight-light">Crowd Cast</a>
+                    <p class="text-white ml-5 font-weight-light company-location">Tokyo, Japan</p>
+                    <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+                        <ul>
+                            <li class="my-1">Used React Native to developed both Android and iOS for an expense management app</li>
+                            <li class="my-1">Setup a CI, CD, OTA system for releasing several applications through Jenkins, Codeship, CodePush(Microsoft App Center) </li>
+                            <li class="my-1">Used Detox along with Jest and enzyme to create mobile unit and e2e tests</li>
+                            <li class="my-1">Setup Google analytics and bug tracking to enable impactful business decisions</li>
+                            <li class="my-1">Provided input on mobile UI & UX, working closely with the engineering manager & backend team</li>
+                            <li class="my-1">Solely responsible for developing/ releasing/ & maintaining core features on the mobile platform using React Native</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -297,12 +320,23 @@
                         <div data-micron="squeeze" class="d-flex justify-content-between">
                             <span data-micron="squeeze">Full Stack Developer</span>
                             <span data-micron="squeeze" class="work-date mt-3">Apr 2015 - Dec 2016
-                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
+                            </span>
                         </div>
                     </button>
                 </div>
                 <div id="gale-partners" class="mx-5 border-bottom animate-dropup">
                     <a href="https://gale.agency" class="text-white ml-5 company-title font-weight-light" target="_blank" rel="noopener noreferrer">Gale Partners</a>
+                    <p class="text-white ml-5 font-weight-light company-location">Toronto, ON, Canada</p>
+                    <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+                        <ul>
+                            <li class="my-1">Developed an ecommerce mobile platform utilizing React Native on Android and iOS</li>
+                            <li class="my-1">Designed REST API to integrate with ecommerce services such as online payment</li>
+                            <li class="my-1">Created a master card for one of the top 5 banks in Canada with AEM (Adobe Experience Manager) and Java</li>
+                            <li class="my-1">Built a childs food app utilizing Django, meteorJS, and cordova for a mobile experience</li>
+                            <li class="my-1">Common libraries used are Lodash, Node, React Native, and React</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
@@ -312,9 +346,10 @@
                     <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
                         aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('environment-canada')">
                         <div data-micron="squeeze" class="d-flex justify-content-between">
-                            <span data-micron="squeeze">CO-OP Systems Analyst</span>
+                            <span data-micron="squeeze">Systems Analyst (Co-op)</span>
                             <span data-micron="squeeze" class="work-date mt-3">Jan 2013 - Aug 2013
-                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
+                            </span>
                         </div>
                     </button>
                 </div> 
@@ -322,6 +357,16 @@
                     <a class="text-white ml-5 company-title font-weight-light"
                         href="https://www.canada.ca/en/environment-climate-change/services/air-pollution/research-science/applications/modelling.html"
                         target="_blank" rel="noopener noreferrer">Environment Canada (ARQI)</a>
+                    <p class="text-white ml-5 font-weight-light company-location">Toronto, ON, Canada</p>
+                    <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+                        <ul>
+                            <li class="my-1">Assisted in developing a graphical analysis software for modelling air quality in Tcl-tk</li>
+                            <li class="my-1">Assisted in maintaining, scheduling, and troubleshooting air quality forecasts using a UNIX/Linux environment</li>
+                            <li class="my-1">Developed shell scripts to help maintain and monitor air quality forecasts using Bash</li>
+                            <li class="my-1">Manipulate csv files for air quality analysis using python or bash scripts</li>
+                            <li class="my-1">Facilitated in user memory management by creating and sending automated emails</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
