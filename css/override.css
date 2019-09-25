@@ -39,6 +39,11 @@ body {
         text-shadow: 0 0.04em gray;
         margin-top: 2vw;
     }
+
+    /* Styling for hobby card*/
+    .hobby-card {
+        width: 50vw;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -47,6 +52,11 @@ body {
         font-size: 3vw;
         display: flex;
         justify-content: space-around;
+    }
+    
+    /* Styling for hobby card*/
+    .hobby-card {
+        width: 50vw;
     }
 }
 
@@ -62,12 +72,22 @@ body {
     .about-description {
         font-size: 1.3vw;
     }
+
+    /* Styling for hobby card*/
+    .hobby-card {
+        width: 35vw;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
    .about-description {
         font-size: 1.3vw;
+    }
+
+    /* Styling for hobby card*/
+    .hobby-card {
+        width: 20vw;
     }
 }
 
@@ -99,13 +119,14 @@ body {
 }
 
 
-/* University styling*/
+/* University title styling*/
 .university {
     line-height: 3em;
     text-decoration: underline;
     font-size: 1.8em;
 }
 
+/* University details styling*/
 .university-details {
     font-size: 1.5em;
     line-height: 0.5em;
@@ -118,21 +139,29 @@ body {
     font-size: 2em;
 }
 
+/* Styling for work date */
 .work-date {
     font-size: 0.7em;
 }
  
+/* Styling for company */
 .company-title {
     line-height: 3em;
     text-decoration: underline;
     font-size: 1.8em;
 }
 
+/* Styling for company address */
 .company-location {
     font-size: 1.2em;
     margin-top: -1em;
 }
 
+
+/* Styling for company responsibilities */
 .company-responsibilities {
     font-size: 1.2em;
 }
+
+
+    
