@@ -1,0 +1,167 @@
+body {
+    background-color: black;
+}
+
+/* Used to override the default bootstrap css */
+.no-padding  {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Adds black to the list of bg colours provided by bootstrap */
+.bg-black {
+    background-color: black;
+}
+
+/* Adds styling to the slogan */
+.slogan {
+    font-size: 5vw;
+    text-shadow: 0 0.04em gray;
+    margin-top: 9vw;
+}
+
+/* styling for contacts button */
+.contact {
+   background-color: transparent;
+   border: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .about-description {
+        font-size: 3vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    /* Adds styling to the slogan */
+    .slogan {
+        font-size: 5vw;
+        text-shadow: 0 0.04em gray;
+        margin-top: 2vw;
+    }
+
+    /* Styling for hobby card*/
+    .hobby-card {
+        width: 50vw;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .about-description {
+        font-size: 3vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    /* Styling for hobby card*/
+    .hobby-card {
+        width: 50vw;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .about-description {
+        font-size: 2vw;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .about-description {
+        font-size: 1.3vw;
+    }
+
+    /* Styling for hobby card*/
+    .hobby-card {
+        width: 35vw;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+   .about-description {
+        font-size: 1.3vw;
+    }
+
+    /* Styling for hobby card*/
+    .hobby-card {
+        width: 20vw;
+    }
+}
+
+
+/* Styling for drop down */
+.dropdown-list {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+}
+
+/* Styling for each drop down item */
+.dropdown-list-item {
+    font-size: 1.5em;
+}
+
+/* Animation for drowndown closing */
+.animate-dropup {
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+}
+
+/* Animation for drowndown opening */
+.animate-dropdown {
+    max-height: 700px;
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+}
+
+
+/* University title styling*/
+.university {
+    line-height: 3em;
+    text-decoration: underline;
+    font-size: 1.8em;
+}
+
+/* University details styling*/
+.university-details {
+    font-size: 1.5em;
+    line-height: 0.5em;
+}
+
+/* Styling for drop down */
+.work-list {
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+}
+
+/* Styling for work date */
+.work-date {
+    font-size: 0.7em;
+}
+ 
+/* Styling for company */
+.company-title {
+    line-height: 3em;
+    text-decoration: underline;
+    font-size: 1.8em;
+}
+
+/* Styling for company address */
+.company-location {
+    font-size: 1.2em;
+    margin-top: -1em;
+}
+
+
+/* Styling for company responsibilities */
+.company-responsibilities {
+    font-size: 1.2em;
+}
+
+
+    

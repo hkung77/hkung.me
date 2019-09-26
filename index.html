@@ -1,164 +1,455 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
 
 <head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
     <title>Henry Kung</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Normalize CSS -->
+    <!-- Used to keep css rendered consistently between browser -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <!-- Polyfill JS -->
+    <!-- Used to support older browsers -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-polyfills/0.1.42/polyfill.min.js"
+        integrity="sha256-/XfEHUGimdIk42Vy7oTnNLtT8sVrO6vnhhnsQT1W1oo=" crossorigin="anonymous"></script>
 
-    <!-- Theme CSS -->
-    <link href="css/grayscale.min.css" rel="stylesheet">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- Micron -->
+    <!-- Allows for better micro interactions between users -->
+    <link href="https://unpkg.com/webkul-micron@1.1.6/dist/css/micron.min.css" type="text/css" rel="stylesheet">
+    <script src="https://unpkg.com/webkul-micron@1.1.6/dist/script/micron.min.js" type="text/javascript"></script>
 
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- Font Awesome CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+
+    <!-- Local CSS & Javascript -->
+    <link rel="stylesheet" href="./css/override.css" />
+    <script src="./js/custom.js"></script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="home">
+    <!-- NavBar -->
+    <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
+        <a class="navbar-brand" data-micron="fade" href="#home">Henry Kung</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01"
+            aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-nav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" data-micron="fade" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-micron="fade" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-micron="fade" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link contact" onclick="handleContactClick()" data-micron="fade">Contact</button>
+                </li>
+            </ul>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i> <span class="light">Henry Kung</span>
+            <!-- External links -->
+            <span class="px-2">
+                <a data-micron="fade" href="https://www.github.com/hkung77" target="_blank" rel="noopener noreferrer">
+                    <i id="github-icon" class="fa fa-github fa-2x fa-inverse" aria-hidden="true"></i>
                 </a>
-            </div>
+            </span>
+            <span class="px-2">
+                <a data-micron="fade" href="https://www.linkedin.com/in/hkung77" target="_blank"
+                    rel="noopener noreferrer">
+                    <i id="linkedin-icon" class="fa fa-linkedin-square fa-2x fa-inverse" aria-hidden="true"></i>
+                </a>
+            </span>
+            <span class="px-2">
+                <a data-micron="fade" href="mailto://henrykung@live.ca" rel="noopener noreferrer">
+                    <i id="email-icon" class="fa fa-envelope fa-2x fa-inverse" aria-hidden="true"></i>
+                </a>
+            </span>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">profile</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#download">Experience</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
     </nav>
 
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <ollect the nav links, forms, and other content for toggling -->
+    <div data-spy="scroll" data-target="#main-nav" data-offset="0" class="bg-black">
+        <!-- Home -->
+        <header class="container-fluid no-padding">
+            <div class="col-md-12 no-padding">
+                <img src="./assets/background.jpg" alt="image of space" class="img-responsive w-100">
+                <div class="card-img-overlay text-white m-5">
+                    <div class="row m-auto">
+                        <div class="col-md-12">
+                            <h1 class="animated fadeInUp text-center font-weight-lighter slogan"> Dreaming
+                                Beyond Expectations </h1>
+                        </div>
+                    </div>
+                </div>
+                </img>
+            </div>
+        </header>
 
-                    <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Digital Experience & Reality <span class=""> Collide </span></h1>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+        <!-- About Me -->
+        <section id="about" class="pb-5 mb-5">
+            <div class="col-md-12 mb-5 pb-5">
+                <div class="d-flex">
+                    <h2 class="text-white ml-5">About Me</h2>
+                    <span class="px-3 mt-1">
+                        <i class="fa fa-user fa-2x fa-inverse" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-9 mx-auto text-white">
+                <p class="about-description">
+                    Henry Kung, Senior Software Engineer
+                    </br></br>
+                    From working in several start ups and having a small team of developers, </br>
+                    I have delivered several quality applications to production, capable of scaling to enterprize
+                    solutions. </br>
+                    Took ownership of deploying, developing, and maintaining our web and mobile applications, </br>
+                    I've setup CI and CD, bug tracking, analytics on both platforms, along with implementing the UI.
+                    </br>
+                    </br>
+                    I have had the opportunity to work internationally from Canada to Japan. </br>
+                    Even though I was abroad, I was still active in the tech community, </br>
+                    by attending tech-meetups or joining tech forums though Github/ Discord/ Stack Overflow. </br>
+                    I keep myself in the loop with new/ emerging technology through subscribing to </br>
+                    newsletters, github repositories, and even participating in Stack Overflow's yearly developer
+                    survey.
+                </p>
+            </div>
+        </section>
+
+        <!-- Tech Specialty -->
+        <section id="experience" class="mt-5 pt-5">
+            <div class="col-md-12">
+                <div class="d-flex">
+                    <h2 class="text-white ml-5 mb-5">Technical Experience</h2>
+                    <span class="px-3 mt-1">
+                        <i class="fa fa-laptop fa-2x fa-inverse" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <!--Mobile -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button
+                        class="btn dropdown-list text-white col-md-12 font-weight-lighter justify-content-between d-flex"
+                        aria-haspopup="true" aria-expanded="false" data-micron="squeeze"
+                        onclick="handleDropDownClick('mobileList')">
+                        Mobile
+                        <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="mobileList" class="mx-5 border-bottom animate-dropup d-flex justify-content-around">
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">React Native, Java/ Kotlin, Swift</li>
+                            <li>Android Studio, XCode</li>
+                            <li>Gradle, Proguard, App store & Play store submission</li>
+                            <li>Firebase Push Notifications, Touch & FaceID</li>
+                            <li>Sketch, REST, GraphQL, OAuth, Google Analytics</li>
+                            <li class="mb-5">JEST, Enzyme, E2E Testing, CI/CD (Jenkins, Codeship, CodePush, Microsoft
+                                App Center)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">React Native Specific
+                                <ul>
+                                    <li>Context, Hooks/Lifecycles</li>
+                                    <li>React-Redux, Relay/Apollo, Intl</li>
+                                    <li>React Navigation / React Native Navigation</li>
+                                    <li>Integration with native features (Calendar, Contacts, Photo Library, Camera)
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
 
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>ABOUT ME</h2>
-                <p>
-                    A compelling passion towards creating digital user experiences with modern innovative technology. 
-                </p>
-                <p> 
-                I am not satisfied until I achieve clean, efficient, and high quality code. I work relentlessly to improve my skills and deepen my knowledge. I consider problems as a fun challenge and enjoys finding creative yet appropriate solutions. Always contributes vigorously to the efforts of the team, whether as a leader or a team member.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="content-section text-center">
-        <div class="download-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Curious to know more?</h2>
-                    <ul class="list-inline banner-social-buttons">
-                        <li>
-                            <a href="https://github.com/hkung77" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/hkung77" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                        </li>
-                    </ul>
+            <!-- FrontEnd -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button
+                        class="btn dropdown-list text-white font-weight-lighter col-md-12 d-flex justify-content-between"
+                        aria-haspopup="true" aria-expanded="false" data-micron="squeeze"
+                        onclick="handleDropDownClick('frontEndList')">
+                        Frontend
+                        <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="frontEndList" class="mx-5 border-bottom animate-dropup d-flex justify-content-around">
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">HTML, CSS, Javascript (ES6) </li>
+                            <li>Bootstrap, JQuery, SCSS/LESS</li>
+                            <li>React, Metoer JS, AEM (Adobe Experience Manager)</li>
+                            <li>Other libraries such as (momentJS, animateCSS, FontAwesome)</li>
+                            <li>Sketch, REST, GraphQL, OAuth, Google Analytics</li>
+                            <li class="mb-5">JEST, Enzyme, E2E Testing, CI/CD (Jenkins, Codeship)</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">React Specific
+                                <ul>
+                                    <li>Context, Hooks/Lifecycles</li>
+                                    <li>React-Redux Relay/Apollo, Intl</li>
+                                    <li>React Router</li>
+                            </li>
+                        </ul>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Contact Me!</h2>
-                <p>
-                Ready to get connected? That's great! Give me a call or send me an email and I get back to you as soon as possible!
-                </p>
-                <i class="fa fa-phone fa-3x sr-contact" data-sr-id="9" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
-                <p> 647-267-5926 </p>
-                <i class="fa fa-envelope-o fa-3x sr-contact" data-sr-id="10" style="; visibility: visible;  -webkit-transform: scale(1); opacity: 1;transform: scale(1); opacity: 1;-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; transition: transform 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s, opacity 0.6s cubic-bezier(0.6, 0.2, 0.1, 1) 0s; "></i>
-                <p><a href="mailto:henrykung@live.ca">henrykung@live.ca</a>
-                </p>
-                
+            <!-- Backend -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button
+                        class="btn dropdown-list text-white font-weight-lighter col-md-12 d-flex justify-content-between"
+                        aria-haspopup="true" aria-expanded="false" data-micron="squeeze"
+                        onclick=" handleDropDownClick('backEndList')">
+                        Backend
+                        <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div id="backEndList" class="mx-5 border-bottom animate-dropup d-flex justify-content-around">
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">Python, Java</li>
+                            <li>Django, Flask, Pipenv</li>
+                            <li>Java Server Packets</li>
+                            <li class="pb-5">MongoDB, Postgres</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="text-white font-weight-lighter dropdown-list-item">
+                            <li class="mt-5">REST API, Graphql</li>
+                            <li>AWS (S3, SNS, EC2)</li>
+                            <li>Google Cloud (QuerySearch), Digital Ocean</li>
+                            <li class="pb-5">WSGI, Nginx, AWS (S2, SNS, EC2)</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <!-- Work Experience -->
+        <section class="mt-5 pt-5">
+            <div class="col-md-12">
+                <div class="d-flex">
+                    <h2 class="text-white ml-5 mb-5">Work Experience</h2>
+                    <span class="px-3 mt-1">
+                        <i class="fa fa-briefcase fa-2x fa-inverse" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <!-- Crowd Cast -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('crowdcast-senior')">
+                        <div data-micron="squeeze" class="d-flex justify-content-between">
+                            <span data-micron="squeeze">Senior Software Engineer</span>
+                            <span class="work-date mt-3" data-micron="squeeze">Jan 2018 - Present
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
+                        </div>
+                    </button>
+                </div>
+                <div id="crowdcast-senior" class="mx-5 border-bottom animate-dropup">
+                    <a href="https://crowdcast.jp/ja/" target="_blank" rel="noreferrer noopener"
+                        class="text-white ml-5 company-title font-weight-light">Crowd Cast</a>
+                    <p class="text-white ml-5 font-weight-light company-location">Tokyo, Japan</p>
+                    <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+                        <ul>
+                            <li class="my-1">Documented engineering onboarding as well as interviewing/training new
+                                engineers</li>
+                            <li class="my-1">Documented feature specifications and UI/UX, working closely with
+                                engineering manager/ product manager</li>
+                            <li class="my-1">Integrations with bots to keep productivity high (ex. Pull Panda &
+                                Dependabot)</li>
+                            <li class="my-1">Managing mobile and front end team, with monthly meetings/ OKRs(quarterly
+                                goals)</li>
+                            <li class="my-1">Responsible for developing/ releasing/ & maintaining core features on web
+                                and mobile platform using React & React Native</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; henrykung 2016</p>
-        </div>
-    </footer>
+            <!-- Crowd Cast -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('crowdcast')">
+                        <div data-micron="squeeze" class="d-flex justify-content-between">
+                            <span data-micron="squeeze">Software Engineer</span>
+                            <span data-micron="squeeze" class="work-date mt-3">Jan 2017 - Jan 2018
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
+                        </div>
+                    </button>
+                </div>
+                <div id="crowdcast" class="mx-5 border-bottom animate-dropup">
+                    <a href="https://crowdcast.jp/ja/" target="_blank" rel="noopener noreferrer"
+                        class="text-white ml-5 company-title font-weight-light">Crowd Cast</a>
+                    <p class="text-white ml-5 font-weight-light company-location">Tokyo, Japan</p>
+                    <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+                        <ul>
+                            <li class="my-1">Used React Native to developed both Android and iOS for an expense
+                                management app</li>
+                            <li class="my-1">Setup a CI, CD, OTA system for releasing several applications through
+                                Jenkins, Codeship, CodePush(Microsoft App Center) </li>
+                            <li class="my-1">Used Detox along with Jest and enzyme to create mobile unit and e2e tests
+                            </li>
+                            <li class="my-1">Setup Google analytics and bug tracking to enable impactful business
+                                decisions</li>
+                            <li class="my-1">Provided input on mobile UI & UX, working closely with the engineering
+                                manager & backend team</li>
+                            <li class="my-1">Solely responsible for developing/ releasing/ & maintaining core features
+                                on the mobile platform using React Native</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.js"></script>
+            <!-- Gale Partners -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('gale-partners')">
+                        <div data-micron="squeeze" class="d-flex justify-content-between">
+                            <span data-micron="squeeze">Full Stack Developer</span>
+                            <span data-micron="squeeze" class="work-date mt-3">Apr 2015 - Dec 2016
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </button>
+                </div>
+                <div id="gale-partners" class="mx-5 border-bottom animate-dropup">
+                    <a href="https://gale.agency" class="text-white ml-5 company-title font-weight-light"
+                        target="_blank" rel="noopener noreferrer">Gale Partners</a>
+                    <p class="text-white ml-5 font-weight-light company-location">Toronto, ON, Canada</p>
+                    <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+                        <ul>
+                            <li class="my-1">Developed an ecommerce mobile platform utilizing React Native on Android
+                                and iOS</li>
+                            <li class="my-1">Designed REST API to integrate with ecommerce services such as online
+                                payment</li>
+                            <li class="my-1">Created a master card for one of the top 5 banks in Canada with AEM (Adobe
+                                Experience Manager) and Java</li>
+                            <li class="my-1">Built a childs food app utilizing Django, meteorJS, and cordova for a
+                                mobile experience</li>
+                            <li class="my-1">Common libraries used are Lodash, Node, React Native, and React</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+            <!-- Canada -->
+            <div class="col-md-12 mb-5">
+                <div class="mx-5 border-bottom">
+                    <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
+                        aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('environment-canada')">
+                        <div data-micron="squeeze" class="d-flex justify-content-between">
+                            <span data-micron="squeeze">Systems Analyst (Co-op)</span>
+                            <span data-micron="squeeze" class="work-date mt-3">Jan 2013 - Aug 2013
+                                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                    </button>
+                </div>
+                <div id="environment-canada" class="mx-5 border-bottom animate-dropup">
+                    <a class="text-white ml-5 company-title font-weight-light"
+                        href="https://www.canada.ca/en/environment-climate-change/services/air-pollution/research-science/applications/modelling.html"
+                        target="_blank" rel="noopener noreferrer">Environment Canada (ARQI)</a>
+                    <p class="text-white ml-5 font-weight-light company-location">Toronto, ON, Canada</p>
+                    <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+                        <ul>
+                            <li class="my-1">Assisted in developing a graphical analysis software for modelling air
+                                quality in Tcl-tk</li>
+                            <li class="my-1">Assisted in maintaining, scheduling, and troubleshooting air quality
+                                forecasts using a UNIX/Linux environment</li>
+                            <li class="my-1">Developed shell scripts to help maintain and monitor air quality forecasts
+                                using Bash</li>
+                            <li class="my-1">Manipulate csv files for air quality analysis using python or bash scripts
+                            </li>
+                            <li class="my-1">Facilitated in user memory management by creating and sending automated
+                                emails</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <!-- -Education -->
+        <section class="mt-5 pt-5">
+            <div class="col-md-12">
+                <div class="d-flex">
+                    <h2 class="text-white ml-5">Education</h2>
+                    <span class="px-3 mt-1">
+                        <i class="fa  fa-graduation-cap fa-2x fa-inverse" aria-hidden="true"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="ml-5">
+                    <a class="text-white university font-weight-light" rel="noopener noreferrer"
+                        href="https://www.ryerson.ca" target="_blank">Ryerson University</a>
+                    <p class="text-white university-details font-weight-lighter">Bachelors Science, Computer Science
+                        2015</p>
+                    <p class="text-white university-details font-weight-lighter">Toronto, ON, Canada</p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+        <section id="projects" class="mt-5 pt-5">
+            <div class="col-md-12 mb-5">
+                <h2 class="text-white ml-5">Side Projects or Hobbies</h2>
+            </div>
 
-    <!-- Theme JavaScript -->
-    <script src="js/grayscale.min.js"></script>
+            <div class="col-md-7 ml-5 mb-5 pb-5">
+            <div class="hobby-card card px-0 bg-black border-white">
+                <img src="https://cdn.nba.net/nba-drupal-prod/2017-08/Twitter-seo-image-NBA-logman.jpg" class="card-img-top" alt="...">
+                <div class="card-body test-white">
+                    <h5 class="card-title text-white">NBA Player & Team search</h5>
+                    <p class="card-text text-white font-weight-light">
+                        This project is run on my raspberry pi zero.
+                        Uses flask and a <a class="text-white border-bottom" target="_blank" href="https://pypi.org/project/nba-api/" rel="noopener noreferrer">NBA library</a> to query for players & team stats
+                    </p>
+                    <div class="d-flex">
+                        <i class="fa fa-exclamation-triangle fa-inverse fa-2x pr-3 mt-3" aria-hidden="true"></i>
+                        <p class="text-white">In Progress... </br> Sometimes site is unavailable when my IP address changes</p>
+                    </div>
+                    <a href="http://projects.hkung.me/nba" class="btn btn-primary">See more</a>
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+    </div>
 
 </body>
 
