@@ -57,7 +57,7 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
       <div class="collapse navbar-collapse" id="main-nav">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link" data-micron="fade" href="#about">About</a>
+            <a class="nav-link active" data-micron="fade" href="#about">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" data-micron="fade" href="#experience">Experience</a>
@@ -307,8 +307,8 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
             <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
                                                                                    aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('crowdcast-lead')">
               <div data-micron="squeeze" class="d-flex justify-content-between">
-                <span data-micron="squeeze">Lead Software Engineer</span>
-                <span class="work-date mt-3" data-micron="squeeze">Jan 2020 - Present
+                <span data-micron="squeeze">Lead Software Engineer & Engineering Manager</span>
+                <span class="work-date mt-3" data-micron="squeeze">Jan 2020 - Dec 2020 
                   <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
               </div>
             </button>
@@ -319,15 +319,16 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
             <p class="text-white ml-5 font-weight-light company-location">Tokyo, Japan</p>
             <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
               <ul>
-                <li>Utilize Google Analytics to help business team research, and collect userdata </li>
-                <li>Research and develop methods for improving the quality of the product</li>
+                <li>Manage 3 seperate teams of engineers consisting of 2 to 3 people</li>
+                <li class="my-1">Facilitate code reviews, pair programming, quarterly 1 on 1s</li>
+                <li class="my-1">Participate in weekly sprint planning & sprint meetings, and bi-weekly manager meetings</li>
+                <li class="my-1">Utilize Google Analytics to help business team research, and collect userdata </li>
                 <li class="my-1">Engineering onboarding as well as interviewing/training new
                   engineers</li>
-                <li class="my-1">Document & orchestrate multiple feature specifications and UI/UX, working closely with
-                  engineering manager/ product manager</li>
-                <li class="my-1">Iterate and improve development and release flows to boost productivity</li>
-                <li class="my-1">Managing mobile and front end team, with monthly meetings/ OKRs(quarterly
-                  goals)</li>
+                <li class="my-1">Enforce and strandardize best practices for engineering development and feature life cycle</li>
+                <li class="my-1">Optimize release flows through GithubActions, Automated E2E and unit testing </li>
+                <li class="my-1">Document multiple feature specifications, user stories, reviewing designs, working closely with
+                  Engineering Manager/ Product Manager/ Backend Technical Lead</li>
                 <li class="my-1">Responsible for developing/ releasing/ & maintaining core features on web
                   and mobile platform using React & React Native</li>
               </ul>
@@ -498,20 +499,32 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD
           <h2 class="text-white ml-5">Side Projects or Hobbies</h2>
         </div>
 
-        <div class="col-md-7 ml-5 mb-5 pb-5">
-          <div class="hobby-card card px-0 bg-black border-white">
+        <div class="d-flex col-md-7 ml-5 mb-5 pb-5 justify-content-around">
+          <div class="d-flex hobby-card card px-0 bg-black border-white">
             <img src="https://cdn.nba.net/nba-drupal-prod/2017-08/Twitter-seo-image-NBA-logman.jpg" class="card-img-top" alt="...">
             <div class="card-body test-white">
               <h5 class="card-title text-white">NBA Player & Team search</h5>
               <p class="card-text text-white font-weight-light">
-              This project is run on my raspberry pi zero.
-              Uses flask and a <a class="text-white border-bottom" target="_blank" href="https://pypi.org/project/nba-api/" rel="noopener noreferrer">NBA library</a> to query for players & team stats
+              This project is run on netlify with a heroku express server.
               </p>
-              <div class="d-flex">
-                <i class="fa fa-exclamation-triangle fa-inverse fa-2x pr-3 mt-3" aria-hidden="true"></i>
-                <p class="text-white">In Progress... </br> Sometimes site is unavailable when my IP address changes</p>
+              <div class="d-flex align-items-center">
+                <i class="fa fa-exclamation-triangle fa-inverse fa-2x pr-3" aria-hidden="true"></i>
+                <p class="text-white">NBA has blacklisted many hosting IP addresses (localhost only)</p>
               </div>
-              <a href="http://nba.hkung.me" class="btn btn-primary">See more</a>
+                <a href="http://nba.hkung.me" class="btn btn-primary">See more</a>
+            </div>
+          </div>
+
+          <div class="d-flex hobby-card card px-0 bg-black border-white">
+            <img src="https://media.wizards.com/2017/images/daily/41mztsnrdm.jpg" class="card-img-top" alt="...">
+            <div class="card-body test-white">
+              <h5 class="card-title text-white">Magic The Gathering Sign In/Sign Up & Search</h5>
+              <p class="card-text text-white font-weight-light">
+              This project is run on netlify with a heroku express server.
+              </br>
+              Work in progress
+              </p>
+              <a href="http://magic.hkung.me" class="btn btn-primary">See more</a>
             </div>
           </div>
         </div>
