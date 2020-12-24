@@ -25,8 +25,8 @@
   <script src="https://unpkg.com/webkul-micron@1.1.6/dist/script/micron.min.js" type="text/javascript"></script>
 
   <!-- Bootstrap Style -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
   <!-- Font Awesome CDN -->
   <script src="https://kit.fontawesome.com/61770d0e0e.js" crossorigin="anonymous"></script>
@@ -39,53 +39,54 @@
 
 <body id="home">
   <!-- Bootstrap JS import -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
 
   <!-- NavBar -->
-  <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top">
-    <a class="navbar-brand" data-micron="fade" href="#home">Henry Kung</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" data-micron="fade" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-micron="fade" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-micron="fade" href="#projects">Projects</a>
-        </li>
-        <li class="nav-item">
-          <button class="nav-link contact" onclick="handleContactClick()" data-micron="fade">Contact</button>
-        </li>
-      </ul>
+  <nav id="main-nav" class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" data-micron="fade" href="#home">Henry Kung</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+        <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <a class="nav-link" data-micron="fade" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-micron="fade" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-micron="fade" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item d-none d-lg-block d-xl-block">
+            <button class="nav-link contact" onclick="handleContactClick()" data-micron="fade">Contact</button>
+          </li>
+        </ul>
 
-      <!-- External links -->
-      <span class="px-2">
-        <a data-micron="fade" href="https://www.github.com/hkung77" target="_blank" rel="noopener noreferrer">
-          <i id="github-icon" class="fa fa-github fa-2x fa-inverse" aria-hidden="true"></i>
-        </a>
-      </span>
-      <span class="px-2">
-        <a data-micron="fade" href="https://www.linkedin.com/in/hkung77" target="_blank" rel="noopener noreferrer">
-          <i id="linkedin-icon" class="fa fa-linkedin-square fa-2x fa-inverse" aria-hidden="true"></i>
-        </a>
-      </span>
-      <span class="px-2">
-        <a data-micron="fade" href="mailto://henrykung@live.ca" rel="noopener noreferrer">
-          <i id="email-icon" class="fa fa-envelope fa-2x fa-inverse" aria-hidden="true"></i>
-        </a>
-      </span>
+        <!-- External links -->
+        <div class="d-flex">
+          <span class="px-2">
+            <a data-micron="fade" href="https://www.github.com/hkung77" target="_blank" rel="noopener noreferrer">
+              <i id="github-icon" class="fa fa-github fa-2x fa-inverse" aria-hidden="true"></i>
+            </a>
+          </span>
+          <span class="px-2">
+            <a data-micron="fade" href="https://www.linkedin.com/in/hkung77" target="_blank" rel="noopener noreferrer">
+              <i id="linkedin-icon" class="fa fa-linkedin-square fa-2x fa-inverse" aria-hidden="true"></i>
+            </a>
+          </span>
+          <span class="px-2">
+            <a data-micron="fade" href="mailto://henrykung@live.ca" rel="noopener noreferrer">
+              <i id="email-icon" class="fa fa-envelope fa-2x fa-inverse" aria-hidden="true"></i>
+            </a>
+          </span>
+        </div>
 
+      </div>
     </div>
   </nav>
 
@@ -110,7 +111,7 @@
     <section id="about" class="pb-5 mb-5">
       <div class="col-md-12 mb-5 pb-5">
         <div class="d-flex">
-          <h2 class="text-white ml-5">About Me</h2>
+          <h2 class="text-white ms-5">About Me</h2>
           <span class="px-3 mt-1">
             <i class="fa fa-user fa-2x fa-inverse" aria-hidden="true"></i>
           </span>
@@ -141,7 +142,7 @@
     <section id="experience" class="mt-5 pt-5">
       <div class="col-md-12">
         <div class="d-flex">
-          <h2 class="text-white ml-5 mb-5">Technical Experience</h2>
+          <h2 class="text-white ms-5 mb-5">Technical Experience</h2>
           <span class="px-3 mt-1">
             <i class="fa fa-laptop fa-2x fa-inverse" aria-hidden="true"></i>
           </span>
@@ -161,12 +162,12 @@
           <div>
             <ul class="text-white font-weight-lighter dropdown-list-item">
               <li class="mt-5">React Native, Java/ Kotlin, Swift</li>
-              <li>Android Studio, XCode</li>
-              <li>Gradle, Proguard, App store & Play store submission</li>
-              <li>Firebase Push Notifications, Touch & FaceID</li>
-              <li>Sketch, REST, GraphQL, OAuth, Google Analytics</li>
-              <li>Testing (JEST, Enzyme, Sinon, E2E, Eslint, Detox)</li>
-              <li>Bug Reporting (Bugsnag, Sentry, Firebase, Crashlytics)</li>
+              <li >Android Studio, XCode</li>
+              <li >Gradle, Proguard, App store & Play store submission</li>
+              <li >Firebase Push Notifications, Touch & FaceID</li>
+              <li >Sketch, REST, GraphQL, OAuth, Google Analytics</li>
+              <li >Testing (JEST, Enzyme, Sinon, E2E, Eslint, Detox)</li>
+              <li >Bug Reporting (Bugsnag, Sentry, Firebase, Crashlytics)</li>
               <li class="mb-5">CI/CD, OTA (Jenkins, Codeship, CodePush, Microsoft App Center)</li>
             </ul>
           </div>
@@ -174,10 +175,10 @@
             <ul class="text-white font-weight-lighter dropdown-list-item">
               <li class="mt-5">React Native Specific
                 <ul>
-                  <li>Context, Hooks/Lifecycles</li>
-                  <li>React-Redux, Relay/Apollo, Intl</li>
-                  <li>React Navigation / React Native Navigation</li>
-                  <li>Integration with native features (Calendar, Contacts, Photo Library, Camera)
+                  <li >Context, Hooks/Lifecycles</li>
+                  <li >React-Redux, Relay/Apollo, Intl</li>
+                  <li >React Navigation / React Native Navigation</li>
+                  <li >Integration with native features (Calendar, Contacts, Photo Library, Camera)
                   </li>
                 </ul>
               </li>
@@ -200,11 +201,11 @@
           <div>
             <ul class="text-white font-weight-lighter dropdown-list-item">
               <li class="mt-5">HTML, CSS, Javascript (ES6) </li>
-              <li>Bootstrap, JQuery, SCSS/LESS</li>
-              <li>Webpack, Node, React, Metoer JS, AEM (Adobe Experience Manager)</li>
-              <li>Other libraries such as (momentJS, animateCSS, FontAwesome)</li>
-              <li>Sketch, REST, GraphQL, OAuth, Google Analytics</li>
-              <li>Testing (JEST, Enzyme, Sinon, Eslint), E2E (Cypress)</li>
+              <li >Bootstrap, JQuery, SCSS/LESS</li>
+              <li >Webpack, Node, React, Metoer JS, AEM (Adobe Experience Manager)</li>
+              <li >Other libraries such as (momentJS, animateCSS, FontAwesome)</li>
+              <li >Sketch, REST, GraphQL, OAuth, Google Analytics</li>
+              <li >Testing (JEST, Enzyme, Sinon, Eslint), E2E (Cypress)</li>
               <li class="mb-5">Bug Reporting (Bugsnag, Sentry, Firebase)</li>
             </ul>
           </div>
@@ -212,9 +213,9 @@
             <ul class="text-white font-weight-lighter dropdown-list-item">
               <li class="mt-5">React Specific
                 <ul>
-                  <li>Context, Hooks/Lifecycles</li>
-                  <li>React-Redux Relay/Apollo, Intl</li>
-                  <li>React Router</li>
+                  <li >Context, Hooks/Lifecycles</li>
+                  <li >React-Redux Relay/Apollo, Intl</li>
+                  <li >React Router</li>
               </li>
             </ul>
             </ul>
@@ -236,16 +237,16 @@
           <div>
             <ul class="text-white font-weight-lighter dropdown-list-item">
               <li class="mt-5">Python, Java</li>
-              <li>Django, Flask, Pipenv</li>
-              <li>Java Server Packets</li>
+              <li >Django, Flask, Pipenv</li>
+              <li >Java Server Packets</li>
               <li class="pb-5">MongoDB, Postgres</li>
             </ul>
           </div>
           <div>
             <ul class="text-white font-weight-lighter dropdown-list-item">
               <li class="mt-5">REST API, Graphql</li>
-              <li>AWS (S3, SNS)</li>
-              <li>Google Cloud (QuerySearch), Digital Ocean</li>
+              <li >AWS (S3, SNS)</li>
+              <li >Google Cloud (QuerySearch), Digital Ocean</li>
               <li class="pb-5">Express</li>
             </ul>
           </div>
@@ -266,17 +267,17 @@
           <div>
             <ul class="text-white font-weight-lighter dropdown-list-item">
               <li class="mt-5">Jenkins, Codeship, Github Actions</li>
-              <li>Microsoft App Center, Webpack</li>
-              <li>App Store/ Play Store distribution</li>
-              <li>OTA (Code Push)</li>
+              <li >Microsoft App Center, Webpack</li>
+              <li >App Store/ Play Store distribution</li>
+              <li >OTA (Code Push)</li>
               <li class="pb-5">Nginx, CloudFront</li>
             </ul>
           </div>
           <div>
             <ul class="text-white font-weight-lighter dropdown-list-item">
               <li class="mt-5">Setup E2E testing environment</li>
-              <li>Planning Release flows and processes</li>
-              <li>Heroku, Digital Ocean, AWS EC2</li>
+              <li >Planning Release flows and processes</li>
+              <li >Heroku, Digital Ocean, AWS EC2</li>
               <li class="pb-5">WSGI, Nginx</li>
             </ul>
           </div>
@@ -288,7 +289,7 @@
     <section class="mt-5 pt-5">
       <div class="col-md-12">
         <div class="d-flex">
-          <h2 class="text-white ml-5 mb-5">Work Experience</h2>
+          <h2 class="text-white ms-5 mb-5">Work Experience</h2>
           <span class="px-3 mt-1">
             <i class="fa fa-briefcase fa-2x fa-inverse" aria-hidden="true"></i>
           </span>
@@ -300,20 +301,21 @@
         <div class="mx-5 border-bottom">
           <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
             aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('crowdcast-lead')">
-            <div data-micron="squeeze" class="d-flex justify-content-between">
-              <span data-micron="squeeze">Lead Software Engineer & Engineering Manager</span>
+            <div data-micron="squeeze" class="d-flex justify-content-between align-items-center">
+              <span data-micron="squeeze work-title">Lead Software Engineer & Engineering Manager</span>
               <span class="work-date mt-3" data-micron="squeeze">Jan 2020 - Dec 2020
-                <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
+              <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
+              </span>
             </div>
           </button>
         </div>
         <div id="crowdcast-lead" class="mx-5 border-bottom animate-dropup">
           <a href="https://crowdcast.jp/ja/" target="_blank" rel="noreferrer noopener"
-            class="text-white ml-5 company-title font-weight-light">Crowd Cast</a>
-          <p class="text-white ml-5 font-weight-light company-location">Tokyo, Japan</p>
-          <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+            class="text-white ms-5 company-title font-weight-light">Crowd Cast</a>
+          <p class="text-white ms-5 font-weight-light company-location">Tokyo, Japan</p>
+          <div class="col-md-12 ms-5 text-white company-responsibilities font-weight-light">
             <ul>
-              <li>Manage 3 seperate teams of engineers consisting of 2 to 3 people</li>
+              <li >Manage 3 seperate teams of engineers consisting of 2 to 3 people</li>
               <li class="my-1">Facilitate code reviews, pair programming, quarterly 1 on 1s</li>
               <li class="my-1">Participate in weekly sprint planning & sprint meetings, and bi-weekly manager meetings
               </li>
@@ -338,7 +340,7 @@
         <div class="mx-5 border-bottom">
           <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
             aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('crowdcast-senior')">
-            <div data-micron="squeeze" class="d-flex justify-content-between">
+            <div data-micron="squeeze" class="d-flex justify-content-between align-items-center">
               <span data-micron="squeeze">Senior Software Engineer</span>
               <span class="work-date mt-3" data-micron="squeeze">Jan 2018 - Dec 2019
                 <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
@@ -347,9 +349,9 @@
         </div>
         <div id="crowdcast-senior" class="mx-5 border-bottom animate-dropup">
           <a href="https://crowdcast.jp/ja/" target="_blank" rel="noreferrer noopener"
-            class="text-white ml-5 company-title font-weight-light">Crowd Cast</a>
-          <p class="text-white ml-5 font-weight-light company-location">Tokyo, Japan</p>
-          <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+            class="text-white ms-5 company-title font-weight-light">Crowd Cast</a>
+          <p class="text-white ms-5 font-weight-light company-location">Tokyo, Japan</p>
+          <div class="col-md-12 ms-5 text-white company-responsibilities font-weight-light">
             <ul>
               <li class="my-1">Documented engineering onboarding as well as interviewing/training new
                 engineers</li>
@@ -371,7 +373,7 @@
         <div class="mx-5 border-bottom">
           <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
             aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('crowdcast')">
-            <div data-micron="squeeze" class="d-flex justify-content-between">
+            <div data-micron="squeeze" class="d-flex justify-content-between align-items-center">
               <span data-micron="squeeze">Software Engineer</span>
               <span data-micron="squeeze" class="work-date mt-3">Jan 2017 - Jan 2018
                 <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i></span>
@@ -380,9 +382,9 @@
         </div>
         <div id="crowdcast" class="mx-5 border-bottom animate-dropup">
           <a href="https://crowdcast.jp/ja/" target="_blank" rel="noopener noreferrer"
-            class="text-white ml-5 company-title font-weight-light">Crowd Cast</a>
-          <p class="text-white ml-5 font-weight-light company-location">Tokyo, Japan</p>
-          <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+            class="text-white ms-5 company-title font-weight-light">Crowd Cast</a>
+          <p class="text-white ms-5 font-weight-light company-location">Tokyo, Japan</p>
+          <div class="col-md-12 ms-5 text-white company-responsibilities font-weight-light">
             <ul>
               <li class="my-1">Used React Native to developed both Android and iOS for an expense
                 management app</li>
@@ -406,7 +408,7 @@
         <div class="mx-5 border-bottom">
           <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
             aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('gale-partners')">
-            <div data-micron="squeeze" class="d-flex justify-content-between">
+            <div data-micron="squeeze" class="d-flex justify-content-between align-items-center">
               <span data-micron="squeeze">Full Stack Developer</span>
               <span data-micron="squeeze" class="work-date mt-3">Apr 2015 - Dec 2016
                 <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
@@ -415,10 +417,10 @@
           </button>
         </div>
         <div id="gale-partners" class="mx-5 border-bottom animate-dropup">
-          <a href="https://gale.agency" class="text-white ml-5 company-title font-weight-light" target="_blank"
+          <a href="https://gale.agency" class="text-white ms-5 company-title font-weight-light" target="_blank"
             rel="noopener noreferrer">Gale Partners</a>
-          <p class="text-white ml-5 font-weight-light company-location">Toronto, ON, Canada</p>
-          <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+          <p class="text-white ms-5 font-weight-light company-location">Toronto, ON, Canada</p>
+          <div class="col-md-12 ms-5 text-white company-responsibilities font-weight-light">
             <ul>
               <li class="my-1">Developed an ecommerce mobile platform utilizing React Native on Android
                 and iOS</li>
@@ -439,7 +441,7 @@
         <div class="mx-5 border-bottom">
           <button class="btn work-list text-white col-md-12 font-weight-lighter" aria-haspopup="true"
             aria-expanded="false" data-micron="squeeze" onclick="handleDropDownClick('environment-canada')">
-            <div data-micron="squeeze" class="d-flex justify-content-between">
+            <div data-micron="squeeze" class="d-flex justify-content-between align-items-center">
               <span data-micron="squeeze">Systems Analyst (Co-op)</span>
               <span data-micron="squeeze" class="work-date mt-3">Jan 2013 - Aug 2013
                 <i class="fa fa-angle-down fa-inverse" aria-hidden="true"></i>
@@ -448,11 +450,11 @@
           </button>
         </div>
         <div id="environment-canada" class="mx-5 border-bottom animate-dropup">
-          <a class="text-white ml-5 company-title font-weight-light"
+          <a class="text-white ms-5 company-title font-weight-light"
             href="https://www.canada.ca/en/environment-climate-change/services/air-pollution/research-science/applications/modelling.html"
             target="_blank" rel="noopener noreferrer">Environment Canada (ARQI)</a>
-          <p class="text-white ml-5 font-weight-light company-location">Toronto, ON, Canada</p>
-          <div class="col-md-12 ml-5 text-white company-responsibilities font-weight-light">
+          <p class="text-white ms-5 font-weight-light company-location">Toronto, ON, Canada</p>
+          <div class="col-md-12 ms-5 text-white company-responsibilities font-weight-light">
             <ul>
               <li class="my-1">Assisted in developing a graphical analysis software for modelling air
                 quality in Tcl-tk</li>
@@ -474,14 +476,14 @@
     <section class="mt-5 pt-5">
       <div class="col-md-12">
         <div class="d-flex">
-          <h2 class="text-white ml-5">Education</h2>
+          <h2 class="text-white ms-5">Education</h2>
           <span class="px-3 mt-1">
             <i class="fa  fa-graduation-cap fa-2x fa-inverse" aria-hidden="true"></i>
           </span>
         </div>
       </div>
       <div class="col-md-12">
-        <div class="ml-5">
+        <div class="ms-5">
           <a class="text-white university font-weight-light" rel="noopener noreferrer" href="https://www.ryerson.ca"
             target="_blank">Ryerson University</a>
           <p class="text-white university-details font-weight-lighter">Bachelors Science, Computer Science
@@ -493,10 +495,10 @@
 
     <section id="projects" class="mt-5 pt-5">
       <div class="col-md-12 mb-5">
-        <h2 class="text-white ml-5">Side Projects or Hobbies</h2>
+        <h2 class="text-white ms-5">Side Projects or Hobbies</h2>
       </div>
 
-      <div class="d-flex col-md-7 ml-5 mb-5 pb-5 justify-content-around">
+      <div class="d-flex col-md-7 ms-5 mb-5 pb-5 justify-content-around">
         <div class="d-flex hobby-card card px-0 bg-black border-white">
           <img src="https://cdn.nba.net/nba-drupal-prod/2017-08/Twitter-seo-image-NBA-logman.jpg" class="card-img-top"
             alt="...">
